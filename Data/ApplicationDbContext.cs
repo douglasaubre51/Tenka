@@ -1,11 +1,14 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
 using Tenka.Models;
 
 namespace Tenka.Data{
 	public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
-		: IdentityDbContext<User>(options)
+		: DbContext(options)
 	{
-		DbSet<Household> Households { get; set; }
-		DbSet<WaterTank> Households { get; set; }
-		DbSet<Household> Households { get; set; }
+		public DbSet<Household> Households { get; set; }
+		public DbSet<WaterTank> WaterTanks { get; set; }
 	}
 }

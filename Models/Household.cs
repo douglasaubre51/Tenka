@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace Tenka.Models{
     public class Household{
 
-	[Key] public int HouseholdId;
+	[Key] public int HouseholdId { get; set; }
 
-	[ForeignKey("UserId")] public User User { get; set; }
+	public int UserId { get; set; }
 
-	public List<WaterTank> WaterTanks { get; set; }
+	public int WaterTankId { get; set; }
 
     }
 }
