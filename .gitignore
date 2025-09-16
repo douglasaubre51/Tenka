@@ -1,0 +1,60 @@
+### .NET Core / ASP.NET Core ###
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.swp
+*.swm
+*.swn
+*.swo
+
+# Rider / VS Code
+.idea/
+.vscode/
+*.code-workspace
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+.nuget/
+
+# Logs
+*.log
+logs/
+TestResult*/
+Coverage*/
+*.coverage
+*.coveragexml
+
+# Publish output
+*.pubxml
+*.publishsettings
+Properties/PublishProfiles/
+
+# Other
+*.tmp
+*.bak
+*.DS_Store
+Thumbs.db
+
+### Vim ###
+# Swap files
+*.swp
+*.swo
+*.swn
+
+# Session files
+Session.vim
+
+# Temporary files
+.netrwhist
+*~
+
+# Undo history
+*.un~
+
+
