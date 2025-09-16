@@ -6,5 +6,7 @@ namespace Tenka.Models{
 		[Key] public int WaterTankId { get; set; }
 
 		public bool Shutoff { get; set; }
+
+		public int  WaterLevel { get; set; }
 	}
 }

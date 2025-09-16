@@ -1,14 +1,11 @@
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace Tenka.Models{
-	public class User{
+	public class User : IdentityUser {
 		
-		[Key] public int UserId { get; set; }
-		
-		public string EmailId { get; set; }
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 		
-		[ForeignKey] public Household Household { get; set; }
+		public int HouseholdId { get; set; }
 	}
 }
