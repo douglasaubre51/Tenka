@@ -11,6 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options=>{
+	options.AddPolicy("cors",policy =>{
+		policy.WithOrigins("http://localhost:5173");
+	});
+});
+
 string conn_string = "server=localhost;user=root;database=tenka;password=chancellor66;";
 // add postgres db
 builder.Services.AddDbContext<ApplicationDbContext>((options) =>
@@ -20,6 +26,10 @@ builder.Services.AddDbContext<ApplicationDbContext>((options) =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseCors(
+	"cors"
+);
 
 app.UseAuthorization();
 
